@@ -50,7 +50,7 @@ public class HelloWorldResource {
                         .parameter("client_id", CLIENT_ID)
                         .parameter("redirect_uri",CALLBACK_ADDRESS )
                         .parameter("scope","openid%20profile")
-                .addRest("&state=nclikn1m2lkm1231kj23n12l31l2jk312&nonce=123123123231112313\" />");
+                .parameter("state","nclikn1m2lkm1231kj23n12l31l2jk312").parameter("nonce","123123123231112313\" />").addRest("");
     }
 
     @GET
