@@ -45,7 +45,7 @@ public class HelloWorldResource {
 
     protected String getLoginAddress() {
         return "<html><head><meta http-equiv=\"refresh\" content=\"0; url=" +
-                new URLBuilder(FRANCECONNECT_BASE_PATH + "authorize").addRest("?response_type=code&client_id=" + CLIENT_ID + "&redirect_uri=" + CALLBACK_ADDRESS + "&scope=openid%20profile&state=nclikn1m2lkm1231kj23n12l31l2jk312&nonce=123123123231112313\" />");
+                new URLBuilder(FRANCECONNECT_BASE_PATH + "authorize").parameter("response_type","code").addRest("&client_id=" + CLIENT_ID + "&redirect_uri=" + CALLBACK_ADDRESS + "&scope=openid%20profile&state=nclikn1m2lkm1231kj23n12l31l2jk312&nonce=123123123231112313\" />");
     }
 
     @GET
