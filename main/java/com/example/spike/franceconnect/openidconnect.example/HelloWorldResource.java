@@ -40,6 +40,10 @@ public class HelloWorldResource {
     @Produces({MediaType.TEXT_HTML})
     @Path("login")
     public String login(){
+        return getLoginAddress();
+    }
+
+    protected String getLoginAddress() {
         return "<html><head><meta http-equiv=\"refresh\" content=\"0; url="+FRANCECONNECT_BASE_PATH+"authorize?response_type=code&client_id="+ CLIENT_ID +"&redirect_uri="+CALLBACK_ADDRESS+"&scope=openid%20profile&state=nclikn1m2lkm1231kj23n12l31l2jk312&nonce=123123123231112313\" />";
     }
 
