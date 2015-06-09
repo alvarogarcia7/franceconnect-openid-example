@@ -8,7 +8,7 @@ public class URLBuilder {
 
     public URLBuilder(String basePath) {
         this.basePath = basePath;
-        this.parameters = new HashMap<String, String>();
+        this.parameters = new LinkedHashMap<>();
     }
 
 
