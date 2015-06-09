@@ -1,8 +1,6 @@
 package com.example.spike.franceconnect.openidconnect.example;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.StringJoiner;
+import java.util.*;
 
 public class URLBuilder {
     private final String basePath;
@@ -19,12 +17,15 @@ public class URLBuilder {
     }
 
     private String parameters() {
-        String result = null;
+
+        List<String> formattedParameters = new ArrayList<>();
         for (String name : parameters.keySet()) {
             String value = parameters.get(name);
-            result = name + "=" + value;
+            formattedParameters.add(name + "=" + value);
         }
-        return result;
+        final StringJoiner joiner = new StringJoiner("&");
+        formattedParameters.forEach(joiner::add);
+        return joiner.toString();
 
     }
 
