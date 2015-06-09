@@ -12,10 +12,6 @@ public class URLBuilder {
     }
 
 
-    public String addRest(String rest) {
-        return basePath + "?" + parameters() + rest;
-    }
-
     private String parameters() {
 
         List<String> formattedParameters = new ArrayList<>();
@@ -32,5 +28,9 @@ public class URLBuilder {
     public URLBuilder parameter(String name, String value) {
         this.parameters.put(name, value);
         return this;
+    }
+
+    public String build() {
+        return basePath + "?" + parameters();
     }
 }
